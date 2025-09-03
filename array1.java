@@ -31,5 +31,6 @@ public class array1 {
         System.out.println("bio" + " " + marks[4]);
 
         int percentage = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) / 5;
+        System.out.println("your percentage is " + percentage + "%");
     }
 }
