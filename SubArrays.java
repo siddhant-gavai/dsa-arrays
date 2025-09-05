@@ -2,10 +2,10 @@ public class SubArrays {
     public static void subArrays(int[] numbers) {
         int totalSubArray = 0;
         for (int i = 0; i < numbers.length; i++) {
-            int start = i;
+
             for (int j = i; j < numbers.length; j++) {
-                int end = j;
-                for (int k = start; k <= end; k++) { // print karwana array ko
+
+                for (int k = i; k <= j; k++) { // print karwana array ko
                     System.out.print(numbers[k] + " "); // subarray print
                 }
                 totalSubArray++;
