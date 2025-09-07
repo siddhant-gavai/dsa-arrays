@@ -15,11 +15,12 @@ public class TrappedRainWatter {
         }
 
         // Loop through the height array
+        int trappedWater = 0;
         for (int i = 0; i < height.length; i++) {
             // water level = min(left max boundary, right max boundary)
             int waterLevel = Math.min(leftMax[i], rightMax[i]);
             // trapped water = water level - height[i]
-            int trappedWater = waterLevel - height[i];
+            trappedWater = trappedWater + waterLevel - height[i];
             System.out.print(trappedWater + " ");
         }
 
@@ -28,8 +29,8 @@ public class TrappedRainWatter {
         int totalTrappedWater = 0;
         for (int i = 0; i < height.length; i++) {
             int waterLevel = Math.min(leftMax[i], rightMax[i]);
-            int trappedWater = waterLevel - height[i];
-            totalTrappedWater += trappedWater;
+            trappedWater = waterLevel - height[i];
+            totalTrappedWater = totalTrappedWater + trappedWater;
         }
         return totalTrappedWater;
     }
