@@ -22,7 +22,9 @@ public class MaxSubArraySum2 {
                 } else {
                     currentSum = prefix[j] - prefix[i - 1];
                 }
-                maxSum = Math.max(maxSum, currentSum);
+                if (maxSum < currentSum) {
+                    maxSum = currentSum;
+                }
             }
 
         }

@@ -1,3 +1,4 @@
+// Brute Force Approach
 public class MaxSubArraySum {
 
     public static void maxSubArraySum(int[] numbers) {
