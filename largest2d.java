@@ -1,15 +1,20 @@
+public class largest2d {
 
-public class created2d {
-    public static void serching(int[][] matrix, int key) {
+    public static int largest(int[][] matrix) {
+
+        int largest = Integer.MIN_VALUE;
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                if (matrix[i][j] == key) {
-                    System.out.println("Element found at: (" + i + ", " + j + ")");
-                    return;
+            for (int j = 0; j < matrix[i].length; j++) {
+                int curr = matrix[i][j];
+                if (curr > largest) {
+                    largest = curr;
                 }
+
             }
+
         }
-        System.out.println("Element not found");
+        System.out.println("the largest element is " + largest);
+        return largest;
     }
 
     public static void main(String[] args) {
@@ -19,15 +24,13 @@ public class created2d {
                 { 7, 8, 9 }
         };
 
-        // Print the 2D array
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
-        int key = 5;
-        serching(matrix, key);
+        largest(matrix);
     }
 
 }
