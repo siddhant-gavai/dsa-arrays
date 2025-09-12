@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class LargetNumber {
     public static int findLargest(int[] numbers) {
